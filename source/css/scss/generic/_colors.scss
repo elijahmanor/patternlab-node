@@ -1,0 +1,59 @@
+/*** Colors ***/
+
+$palettes: (
+  blue: (
+    light: #00b3e7,
+    base: #087ba4,
+    dark: #0c4269
+  ),
+  grey: (
+    light: #f4f5f9,
+    mid-light: #d1d4e1,
+    base: #999999,
+    mid-dark: #939393,
+    dark: #383838
+  ),
+  red: (
+    base: #e6462c
+  )
+);
+
+@function palette($palette, $tone: "base") {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+$color-primary--dark: palette(blue, dark);
+.color-primary--dark { background-color: $color-primary--dark; }
+
+$color-primary--mid:  palette(blue);
+.color-primary--mid { background-color: $color-primary--mid; }
+
+$color-primary--bright: palette(blue, light);
+.color-primary--bright { background-color: $color-primary--bright; }
+
+$color-secondary--dark: palette(grey, dark);
+.color-secondary--dark { background-color: $color-secondary--dark; }
+
+$color-secondary--mid: palette(grey, mid-dark);
+.color-secondary--mid { background-color: $color-secondary--mid; }
+
+$color-secondary--bright: palette(grey);
+.color-secondary--bright { background-color: $color-secondary--bright; }
+
+$color-neutral: palette(grey, light);
+.color-neutral { background-color: $color-neutral; }
+
+$color-neutral--dark: palette(grey, mid-light);
+.color-neutral--dark { background-color: $color-neutral--dark; }
+
+$color-alert: palette(red);
+.color-alert { background-color: $color-alert; }
+
+$color-white: #fff;
+.color-white { background-color: $color-white; }
+
+// @each $color in color-primary--dark, color-primary--mid, color-primary--bright, color-secondary--dark, color-secondary--mid, color-secondary--bright, color-neutral, color-neutral--dark, color-alert, color-white {
+//   .#{$color} {
+//     background-color: {$color};
+//   }
+// }

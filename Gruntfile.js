@@ -39,10 +39,10 @@ module.exports = function(grunt) {
 			patternlab: ['Gruntfile.js', './builder/lib/patternlab.js']
 		},
 		watch: {
-			// scss: { //scss can be watched if you like
-			// 	files: ['source/css/**/*.scss', 'public/styleguide/css/*.scss'],
-			// 	tasks: ['default']
-			// },
+			scss: { //scss can be watched if you like
+				files: ['source/css/**/*.scss', 'public/styleguide/css/*.scss'],
+				tasks: ['default']
+			},
 			mustache: {
 				files: ['source/_patterns/**/*.mustache'],
 				tasks: ['default']
@@ -75,14 +75,14 @@ module.exports = function(grunt) {
 	});
 
 	// load all grunt tasks
- 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	//load the patternlab task
 	grunt.task.loadTasks('./builder/');
 
 	//if you choose to use scss, or any preprocessor, you can add it here
-	grunt.registerTask('default', ['clean', 'concat', 'patternlab', /*'sass',*/ 'copy']);
+	grunt.registerTask('default', ['clean', 'concat', 'patternlab', 'sass', 'copy']);
 
 	//travis CI task
-	grunt.registerTask('travis', ['clean', 'concat', 'patternlab', /*'sass',*/ 'copy', 'qunit'])
+	grunt.registerTask('travis', ['clean', 'concat', 'patternlab', 'sass', 'copy', 'qunit']);
 };

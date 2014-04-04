@@ -2,24 +2,23 @@
     $STYLE GUIDE CONTAINER STYLES
 \*------------------------------------*/
 /**
- * NOTE: These styles are specific to the style guide container and should not be modified. 
+ * NOTE: These styles are specific to the style guide container and should not be modified.
  * Use style.scss for all content styles that don't pertain to the style guide container.
- * 
- * Second note: Any important declarations are to prevent brand styles from overriding style guide 
+ *
+ * Second note: Any important declarations are to prevent brand styles from overriding style guide
  */
- 
- 
+
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
 /**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables 
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
  * -----Font
  * -----Colors
  * -----Typography
  * -----Defaults
  * -----Breakpoints
- * MIXINS---------------------------------Sass mixins 
+ * MIXINS---------------------------------Sass mixins
  * RESET----------------------------------Set reset defaults
  * GLOBAL ELEMENTS------------------------Establish global styles
  * -----Main
@@ -37,17 +36,13 @@
  * -----Code View
  */
 
-
-
-
-
 /*------------------------------------*\
-    $STYLE GUIDE VARIABLES 
+    $STYLE GUIDE VARIABLES
 \*------------------------------------*/
 /*Fonts*/
 $sg-font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
-/* Style Guide Interface Colors */ 
+/* Style Guide Interface Colors */
 $sg-primary : #222;
 $sg-secondary : #808080;
 $sg-tertiary : #ddd;
@@ -81,12 +76,8 @@ $sg-bp-xl : 80em;
 
 $animate-quick: 0.2s;
 
-
-
-
-
 /*------------------------------------*\
-    $STYLE GUIDE MIXINS 
+    $STYLE GUIDE MIXINS
 \*------------------------------------*/
 @mixin sg-transition($transition-property, $transition-time, $method) {
 	-webkit-transition: $transition-property $transition-time $method;
@@ -96,13 +87,8 @@ $animate-quick: 0.2s;
 	transition: $transition-property $transition-time $method;
 }
 
-
-
-
-
-
 /*------------------------------------*\
-    $STYLE GUIDE INTERFACE 
+    $STYLE GUIDE INTERFACE
 \*------------------------------------*/
 
 #patternlab-html, #patternlab-body {
@@ -124,14 +110,11 @@ $animate-quick: 0.2s;
   height: 1px;
   padding: 0;
   border: 0;
-  clip: rect(1px, 1px, 1px, 1px); 
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
-
-
-
 /*------------------------------------*\
-    $STYLE GUIDE HEADER 
+    $STYLE GUIDE HEADER
 \*------------------------------------*/
 /* Header */
 .sg-header {
@@ -154,7 +137,7 @@ $animate-quick: 0.2s;
 	  -webkit-box-sizing: border-box;
 	  box-sizing: border-box;
 	}
-	
+
 	ul, ol {
 		padding: 0;
 		margin: 0;
@@ -173,7 +156,7 @@ $animate-quick: 0.2s;
 		padding: $sg-pad;
 		@include sg-transition(background,0.15s,ease-out);
 		@include sg-transition(color,0.15s,ease-out);
-		
+
 		&:hover, &:focus, &.active {
 			color: $sg-quaternary;
 			background: $sg-tint;
@@ -197,10 +180,8 @@ $animate-quick: 0.2s;
       }
     }
   }
-  
+
 }
-
-
 
 /* Navigation */
 .sg-header .sg-nav-toggle {
@@ -219,7 +200,7 @@ $animate-quick: 0.2s;
 		overflow: hidden;
 		max-height: 0;
 		@include sg-transition(max-height,0.5s,ease-out);
-		
+
 		&.active {
 			max-height: 50em;
 		}
@@ -231,21 +212,21 @@ $animate-quick: 0.2s;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	
+
 	> li {
-		
+
 		@media all and (min-width: $sg-bp-med) {
 			border-bottom: 0;
 			border-right: 1px solid $sg-tint;
 			float: left;
 			position: relative;
-			
+
 			> ol {
 				position: absolute;
 				top: $offset-top;
 				left: 0;
 			}
-			
+
 		}
 	}
 }
@@ -256,12 +237,12 @@ $animate-quick: 0.2s;
 		content: ' +';
 		float: right;
 		font-size: $sg-font-size-sm;
-		
+
 		@media all and (min-width: $sg-bp-med) {
 			float: none;
 		}
 	}
-	
+
 	&.active {
 		color: $sg-quaternary;
 		background: $sg-tint;
@@ -306,14 +287,14 @@ $animate-quick: 0.2s;
 	top: 0;
 	right: 0;
 	z-index: 2;
-	
+
 	.sg-acc-panel.active {
 		max-height: 17em;
 	}
-	
+
 	.sg-nav-phases .sg-acc-panel {
 	  min-width: 0;
-	  
+
 	  &.active {
 	  max-height: none;
 	  }
@@ -322,11 +303,11 @@ $animate-quick: 0.2s;
 
 .sg-control-trigger {
 	border-bottom: 1px solid $sg-tint;
-	
+
 	@media all and (min-width: $sg-bp-med) {
 		border: 0;
 	}
-	
+
 	@media all and (min-width: $sg-bp-large) {
 		float: left;
 		width: 6em;
@@ -343,14 +324,11 @@ $animate-quick: 0.2s;
 	}
 }
 
-
-
-
 .sg-control {
 	> li {
 		float: left;
 	}
-	
+
 	.sg-input {
 		padding: 0.1em;
 		-webkit-transition: all $animate-quick ease-out;
@@ -470,8 +448,6 @@ $animate-quick: 0.2s;
 	}
 }
 
-
-
 /*------------------------------------*\
     $STYLE GUIDE VIEWPORT
 \*------------------------------------*/
@@ -504,7 +480,7 @@ $animate-quick: 0.2s;
   border: 0;
   x-margin: 0 auto;
   height: 100%;
-  width: 100%; 
+  width: 100%;
 
   &.hay-mode {
 		-webkit-transition: all 40s linear;
@@ -516,17 +492,17 @@ $animate-quick: 0.2s;
 }
 
 #sg-cover {
-	width: 100%; 
-	height: 100%; 
-	display: none; 
-	position: absolute; 
-	z-index: 20; 
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	z-index: 20;
 	cursor: col-resize;
 }
 
 #sg-gen-container {
-	height: 100%; 
-	text-align: center; 
+	height: 100%;
+	text-align: center;
 	margin: 0 auto;
 	-webkit-overflow-scrolling: touch;
   	overflow: scroll;
@@ -541,17 +517,17 @@ $animate-quick: 0.2s;
 }
 
 #sg-rightpull-container {
-	width: 10px; 
-	float: right; 
-	margin: 0; 
-	height: 100%; 
+	width: 10px;
+	float: right;
+	margin: 0;
+	height: 100%;
 	cursor: col-resize;
 }
 
 #sg-rightpull {
-	margin: 0; 
-	width: 10px; 
-	height: 100%; 
+	margin: 0;
+	width: 10px;
+	height: 100%;
 	background: #999;
 	-webkit-transition: background $animate-quick ease-out;
     -moz-transition: background $animate-quick ease-out;
@@ -582,7 +558,7 @@ $animate-quick: 0.2s;
 
 
 /*------------------------------------*\
-    $STYLE GUIDE CONTENT 
+    $STYLE GUIDE CONTENT
 \*------------------------------------*/
 
 /* Section Pattern */
@@ -605,7 +581,7 @@ $animate-quick: 0.2s;
 		color: $sg-secondary;
 		text-decoration: none;
 		cursor: pointer;
-		
+
 		&:hover {
 			color: $sg-primary;
 		}
@@ -636,7 +612,7 @@ $animate-quick: 0.2s;
 		white-space: -moz-pre-line;
 		white-space: -pre-line;
 		white-space: -o-pre-line;
-		word-wrap: break-word; 
+		word-wrap: break-word;
 		white-space: pre-line;
 		border: 1px solid $sg-tone;
 		padding: $sg-pad-half;
@@ -673,16 +649,16 @@ $animate-quick: 0.2s;
 	text-align: center;
 	margin-bottom: $sg-pad-half;
 	padding: 1em !important;
-	
+
 	&:nth-of-type(2n) {
 		color: $sg-tertiary;
 		background: $sg-secondary;
 	}
-	
+
 	.gi {
 		background: $sg-tone;
 		color: $sg-tertiary;
-		
+
 		&:nth-of-type(2n) {
 			background: $sg-tone-2;
 		}
@@ -697,7 +673,7 @@ $animate-quick: 0.2s;
 	text-align: center;
 }
 
-//Animate Demo to show 
+//Animate Demo to show
 .animate-move {
 	position: relative;
 
@@ -739,7 +715,7 @@ $animate-quick: 0.2s;
 	display: block;
 	height: 1.5em;
 	width: 50%;
-	
+
 	@media all and (max-width: $sg-bp-small-2) {
 		float: left;
 		margin-right: 0.3em;
@@ -750,7 +726,7 @@ $animate-quick: 0.2s;
 		height: 4em;
 		margin-bottom: 0.2em;
 	}
-	
+
 }
 
 .sg-label {
@@ -787,8 +763,8 @@ $animate-quick: 0.2s;
 	-webkit-transition: bottom 0.3s ease-out;
 	-moz-transition: bottom 0.3s ease-out;
   	-webkit-transition: bottom 0.3s ease-out;
-  	-ms-transition: bottom 0.3s ease-out; 
-  	-o-transition: bottom 0.3s ease-out; 
+  	-ms-transition: bottom 0.3s ease-out;
+  	-o-transition: bottom 0.3s ease-out;
   	transition:  bottom 0.3s ease-out;
 
   	a {

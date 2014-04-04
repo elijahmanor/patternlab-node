@@ -1,0 +1,72 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+
+$text-family--sans: 'Open Sans', arial, sans-serif;
+$text-color--base: "";
+$text-weight--extraBold: 800;
+$text-weight--bold: 700;
+
+@mixin text(
+  $size: $text-size,
+  $weight: normal,
+  $lineHeight: normal,
+  $family: $text-family--sans,
+  $color: $text-color--base) {
+  font-size: 12px; // @include scut-rem-fallback($size);
+  font-weight: $weight;
+  line-height: $lineHeight; // @include scut-rem-fallback($lineHeight)
+  color: $color;
+}
+
+@mixin text-heading--masthead { @include text(48, $text-weight--extraBold); }
+@mixin text-heading--primary { @include text(36, $text-weight--extraBold); }
+@mixin text-heading--secondary { @include text(24, $text-weight--extraBold); }
+@mixin text-heading--tertiary { @include text(18, $text-weight--bold, 22); }
+@mixin text-subheading--tertiary { @include text(16, $text-weight--bold, 22); }
+@mixin text-copy--masthead { @include text(18, $lineHeight: 24px); }
+@mixin text-copy--body { @include text(16, $lineHeight: 24px); }
+@mixin text-copy--supporting { @include text(12, $lineHeight: 18px); }
+
+.content, p {
+  @include text-copy--supporting;
+  color: $color-secondary--dark;
+  font-family: $text-family--sans;
+}
+
+h1 {
+  @include text-heading--primary;
+  color: $color-primary--dark;
+  &.masthead {
+    @include text-heading--masthead;
+  }
+}
+
+h2 {
+  @include text-heading--secondary;
+  color: $color-primary--dark;
+}
+
+h3 {
+  @include text-heading--tertiary;
+  color: $color-primary--dark;
+}
+
+h4 {
+  color: $color-primary--dark;
+  @include text-subheading--tertiary;
+  &.section-heading {
+    padding: 5px 20px;
+    background-color: $color-primary--mid;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 12px; // @include scut-rem-fallback(16);
+  }
+  em {
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+aside {
+  @include text-copy--supporting;
+  color: $color-secondary--mid;
+}

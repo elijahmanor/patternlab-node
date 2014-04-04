@@ -7,13 +7,13 @@
     $TABLE OF CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES..............................Declarations of Sass variables 
+ * VARIABLES..............................Declarations of Sass variables
  * .....Colors
  * .....Typography
  * .....Layout
  * .....Defaults
  * .....Breakpoints
- * MIXINS.................................Sass mixins 
+ * MIXINS.................................Sass mixins
  * RESET..................................Set reset defaults
  * GLOBAL CLASSES.........................Set reset defaults
  * GLOBAL ELEMENTS........................Establish global styles
@@ -29,15 +29,13 @@
  * TOC To Be Continued
  */
 
-
+@import "../../bower_components/scut/dist/scut";
 
 @import "scss/generic/variables";
 @import "scss/generic/mixins";
 @import "scss/generic/reset";
-
-
-
-
+@import "scss/generic/colors";
+@import "scss/generic/typography";
 
 /*------------------------------------*\
     $GLOBAL ELEMENTS
@@ -53,15 +51,10 @@
 @import "scss/base/tables";
 @import "scss/base/animation";
 
-
-
-
-
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
 @import "scss/objects/layout";
-
 
 /*------------------------------------*\
     $PAGE STRUCTURE
@@ -71,13 +64,10 @@
 @import "scss/objects/main";
 @import "scss/objects/footer";
 
-
-
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
 @import "scss/objects/text";
-
 
 /*------------------------------------*\
     $COMPONENTS
@@ -92,5 +82,3 @@
 @import "scss/objects/sections";
 @import "scss/objects/article";
 @import "scss/objects/comments";
-
-

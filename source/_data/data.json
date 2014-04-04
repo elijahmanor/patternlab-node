@@ -1,4 +1,16 @@
 {
+	"colors" : {
+		"color-primary--dark": { "name": "color-primary--dark", "hex": "#0c4269" },
+		"color-primary--mid": { "name": "color-primary--mid", "hex": "#087ba4" },
+		"color-primary--bright": { "name": "color-primary--bright", "hex": "#00b3e7" },
+		"color-secondary--dark": { "name": "color-secondary--dark", "hex": "#383838" },
+		"color-secondary--mid": { "name": "color-secondary--mid", "hex": "#939393" },
+		"color-secondary--bright":{ "name": "color-secondary--bright", "hex": "#999999" } ,
+		"color-neutral": { "name": "color-neutral", "hex": "#f4f5f9" },
+		"color-neutral--dark": { "name": "color-neutral--dark", "hex": "#d1d4e1" },
+		"color-alert": { "name": "color-alert", "hex": "#e6462c" },
+		"color-white": { "name": "color-white", "hex": "#ffffff" }
+	},
 	"img": {
 		"landscape-4x3": {
 			"src": "../../images/fpo_4x3.png",

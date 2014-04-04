@@ -5,13 +5,13 @@
     $TABLE OF CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES..............................Declarations of Sass variables 
+ * VARIABLES..............................Declarations of Sass variables
  * .....Colors
  * .....Typography
  * .....Layout
  * .....Defaults
  * .....Breakpoints
- * MIXINS.................................Sass mixins 
+ * MIXINS.................................Sass mixins
  * RESET..................................Set reset defaults
  * GLOBAL CLASSES.........................Set reset defaults
  * GLOBAL ELEMENTS........................Establish global styles
@@ -26,6 +26,13 @@
  * NAVIGATION------------------------------
  * TOC To Be Continued
  */
+/*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v0.10.3
+* Docs at http://davidtheclark.github.io/scut
+*/
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
@@ -55,6 +62,113 @@ html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, 
 
 header, footer, nav, section, article, hgroup, figure {
   display: block;
+}
+
+/*** Colors ***/
+.color-primary--dark {
+  background-color: #0c4269;
+}
+
+.color-primary--mid {
+  background-color: #087ba4;
+}
+
+.color-primary--bright {
+  background-color: #00b3e7;
+}
+
+.color-secondary--dark {
+  background-color: #383838;
+}
+
+.color-secondary--mid {
+  background-color: #939393;
+}
+
+.color-secondary--bright {
+  background-color: #999999;
+}
+
+.color-neutral {
+  background-color: #f4f5f9;
+}
+
+.color-neutral--dark {
+  background-color: #d1d4e1;
+}
+
+.color-alert {
+  background-color: #e6462c;
+}
+
+.color-white {
+  background-color: white;
+}
+
+.content, p {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: "";
+  color: #383838;
+  font-family: "Open Sans", arial, sans-serif;
+}
+
+h1 {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+  color: "";
+  color: #0c4269;
+}
+h1.masthead {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+  color: "";
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: normal;
+  color: "";
+  color: #0c4269;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22;
+  color: "";
+  color: #0c4269;
+}
+
+h4 {
+  color: #0c4269;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22;
+  color: "";
+}
+h4.section-heading {
+  padding: 5px 20px;
+  background-color: #087ba4;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+h4 em {
+  font-weight: 400;
+  font-style: normal;
+}
+
+aside {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: "";
+  color: #939393;
 }
 
 /*------------------------------------*\
@@ -882,7 +996,6 @@ td {
   font-weight: normal;
   font-style: normal;
 }
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icons';
